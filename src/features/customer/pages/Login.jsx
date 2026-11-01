@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import { useNavigate } from "react-router";
 import { CgArrowLeft } from "react-icons/cg";
 import OTPInput from "../components/OTPInput/OTPInput";
-import users from "../data/dataUsers"
+import users from "../../../shared/data/dataUsers"
 import OTPTimer from "../components/OTPTimer/OTPTimer";
 import Modal from "../components/Modal/Modal";
 import modalConfig from "../components/Modal/modalConfig";

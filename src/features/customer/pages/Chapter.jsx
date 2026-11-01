@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { useParams } from 'react-router'
-import courses from "../data/dataCourses"
+import courses from "../../../shared/data/dataCourses"
 import Filter from '../components/Chapter/Filter'
 import Level from '../components/Chapter/Level'
 import Video from '../components/Video/Video'

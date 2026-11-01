@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { AuthContext } from '../context/AuthContext';
-import dataQuestions from "../../data/dataQuestions";
+import dataQuestions from "../../../../shared/data/dataQuestions";
 import { IoArrowUndoCircleSharp } from "react-icons/io5";
 import { ThemeContext } from '../context/ThemeContext';
 

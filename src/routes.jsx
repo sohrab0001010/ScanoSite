@@ -1,21 +1,20 @@
 import React from 'react'
 import { createBrowserRouter } from 'react-router'
-import RootLayout from './components/layout/RootLayout'
-import Home from "./pages/Home"
-import PageCourse from "./pages/Course"
-import Login from './pages/Login'
-import Register from './pages/Register'
-import AboutUs from './pages/AboutUs'
-import ContactUs from './pages/ContactUs'
-import Chapter from './pages/Chapter'
-import Buy from './pages/Buy'
-import BasketShop from './pages/BasketShop'
-import Payment from './pages/Payment'
-import { FaTerminal } from 'react-icons/fa'
-import FinalPayment from './pages/FinalPayment'
-import PanelUser from './pages/PanelUser'
-import Alows from './pages/Alows'
-import Regulation from './pages/Regulation'
+import RootLayout from './features/customer/components/layout/RootLayout'
+import Home from "./features/customer/pages/Home"
+import PageCourse from "./features/customer/pages/Course"
+import Login from './features/customer/pages/Login'
+import Register from './features/customer/pages/Register'
+import AboutUs from './features/customer/pages/AboutUs'
+import ContactUs from './features/customer/pages/ContactUs'
+import Chapter from './features/customer/pages/Chapter'
+import Buy from './features/customer/pages/Buy'
+import BasketShop from './features/customer/pages/BasketShop'
+import Payment from './features/customer/pages/Payment'
+import FinalPayment from './features/customer/pages/FinalPayment'
+import PanelUser from './features/customer/pages/PanelUser'
+import Alows from './features/customer/pages/Alows'
+import Regulation from './features/customer/pages/Regulation'
 
 const router = createBrowserRouter([
     {
@@ -86,7 +85,28 @@ const router = createBrowserRouter([
         ]
     },
 
-
+    {
+        path: "/admin",
+        element: <AdminLayout />,
+        children: [
+            {
+            index: true,
+            element: <AdminDashboard />,
+            },
+            {
+            path: "users",
+            element: <Users />,
+            },
+            {
+            path: "books",
+            element: <Books />,
+            },
+            {
+            path: "transactions",
+            element: <Transactions />,
+            },
+        ],
+        }
 
 ])
 

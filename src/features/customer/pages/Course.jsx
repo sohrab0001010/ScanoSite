@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { useParams } from 'react-router';
-import courses from '../data/dataCourses';
+import courses from '../../../shared/data/dataCourses';
 import SectionRight from '../components/Course/SectionRight';
 import SectionLeft from '../components/Course/SectionLeft';
 import Subscription from '../components/Subscription/Subscription';

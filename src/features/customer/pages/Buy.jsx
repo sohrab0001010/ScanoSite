@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router'
-import dataCourses from "../data/dataCourses"
+import dataCourses from "../../../shared/data/dataCourses"
 
 const Buy = () => {
 

@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import Course from "../components/Home/Course";
 import { Link } from "react-router";
-import courses from "../data/dataCourses";
-import books  from "../data/dataBooks";
+import courses from "../../../shared/data/dataCourses";
+import books  from "../../../shared/data/dataBooks";
 import Book from "../components/Home/Book";
 import Modal from "../components/Modal/Modal";
 import modalConfig from "../components/Modal/modalConfig";

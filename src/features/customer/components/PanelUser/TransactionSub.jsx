@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import subscriptionTransactions from "../../data/dataTransactions/datasubscriptionTransactions "
+import subscriptionTransactions from "../../../../shared/data/dataTransactions/datasubscriptionTransactions "
 import { AuthContext } from '../context/AuthContext';
 
 const TransactionSub = () => {

@@ -15,6 +15,7 @@ import FinalPayment from './features/customer/pages/FinalPayment'
 import PanelUser from './features/customer/pages/PanelUser'
 import Alows from './features/customer/pages/Alows'
 import Regulation from './features/customer/pages/Regulation'
+import AdminLogin from './features/admin/pages/AdminLogin'
 
 const router = createBrowserRouter([
     {
@@ -84,6 +85,10 @@ const router = createBrowserRouter([
             
         ]
     },
+    {
+        path: "/admin/login",
+        element: <AdminLogin/>
+    },
 
     {
         path: "/admin",
@@ -106,7 +111,7 @@ const router = createBrowserRouter([
             element: <Transactions />,
             },
         ],
-        }
+    }
 
 ])
 

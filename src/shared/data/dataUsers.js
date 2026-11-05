@@ -2,24 +2,25 @@ const users = [
   {
     id: 1,
     name: "Sohrab Ghorbani",
+    username: "sohrab_ghorbani",
     phone: "09162019117",
     password: "1851375",
     role: "ADMIN",
     subscriptions: [],
   },
-
   {
     id: 2,
     name: "Ahmad Zamani",
+    username: "ahmad_zamani",
     phone: "09388595862",
     password: "291374",
     role: "ADMIN",
     subscriptions: [],
   },
-
   {
     id: 3,
     name: "Mohammad Zamani",
+    username: "mohammad_zamani",
     phone: "09902436396",
     password: "123456",
     role: "USER",
@@ -46,19 +47,19 @@ const users = [
       },
     ],
   },
-
   {
     id: 4,
     name: "Mehran Shabani",
+    username: "mehran_shabani",
     phone: "09900324369",
     password: "1991374",
     role: "USER",
     subscriptions: [],
   },
-
   {
     id: 5,
     name: "Arman Ahmadi",
+    username: "arman_ahmadi",
     phone: "09124567831",
     password: "456789",
     role: "USER",
@@ -75,10 +76,10 @@ const users = [
       },
     ],
   },
-
   {
     id: 6,
     name: "Nima Karimi",
+    username: "nima_karimi",
     phone: "09351247896",
     password: "654321",
     role: "USER",
@@ -105,10 +106,10 @@ const users = [
       },
     ],
   },
-
   {
     id: 7,
     name: "Ali Rezaei",
+    username: "ali_rezaei",
     phone: "09129876543",
     password: "789456",
     role: "USER",
@@ -125,10 +126,10 @@ const users = [
       },
     ],
   },
-
   {
     id: 8,
     name: "Sina Mohammadi",
+    username: "sina_mohammadi",
     phone: "09911223344",
     password: "147258",
     role: "USER",
@@ -145,19 +146,19 @@ const users = [
       },
     ],
   },
-
   {
     id: 9,
     name: "Amir Hosseini",
+    username: "amir_hosseini",
     phone: "09361234578",
     password: "852369",
     role: "USER",
     subscriptions: [],
   },
-
   {
     id: 10,
     name: "Reza Moradi",
+    username: "reza_moradi",
     phone: "09193456782",
     password: "369258",
     role: "USER",
@@ -184,10 +185,10 @@ const users = [
       },
     ],
   },
-
   {
     id: 11,
     name: "Hossein Kazemi",
+    username: "hossein_kazemi",
     phone: "09107654321",
     password: "741852",
     role: "USER",
@@ -204,10 +205,10 @@ const users = [
       },
     ],
   },
-
   {
     id: 12,
     name: "Meysam Ebrahimi",
+    username: "meysam_ebrahimi",
     phone: "09987654321",
     password: "963852",
     role: "USER",

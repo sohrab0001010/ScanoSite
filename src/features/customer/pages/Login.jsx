@@ -184,7 +184,7 @@ const Login = () => {
         />
 
         {/* Form */}
-        <div
+        <form
           className="
             relative
             z-10
@@ -397,7 +397,7 @@ const Login = () => {
               active:scale-[0.98]
             "
           />
-        </div>
+        </form>
       </div>
     </div>
   );

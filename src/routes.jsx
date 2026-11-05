@@ -16,6 +16,12 @@ import PanelUser from './features/customer/pages/PanelUser'
 import Alows from './features/customer/pages/Alows'
 import Regulation from './features/customer/pages/Regulation'
 import AdminLogin from './features/admin/pages/AdminLogin'
+import AdminLayout from './features/admin/components/Layouts/AdminLayout'
+import AdminDashboard from './features/admin/pages/AdminDashboard'
+import Users from './features/admin/pages/Users'
+import Courses from './features/admin/pages/Courses'
+import Books from './features/admin/pages/Books'
+import Transactions from './features/admin/pages/Transactions'
 
 const router = createBrowserRouter([
     {
@@ -101,6 +107,10 @@ const router = createBrowserRouter([
             {
             path: "users",
             element: <Users />,
+            },
+            {
+                path: "courses",
+                element: <Courses />
             },
             {
             path: "books",

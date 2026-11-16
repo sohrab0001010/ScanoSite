@@ -5,7 +5,8 @@ const users = [
     username: "sohrab_ghorbani",
     phone: "09162019117",
     password: "1851375",
-    role: "ADMIN",
+    role: "BOSS",
+    status: "prmitted",
     subscriptions: [],
   },
   {
@@ -14,8 +15,18 @@ const users = [
     username: "ahmad_zamani",
     phone: "09388595862",
     password: "291374",
-    role: "ADMIN",
+    role: "SUPER ADMIN",
+    status: "prmitted",
     subscriptions: [],
+  },
+  {
+    id: 13,
+    name: "Naser Zamani",
+    username: "naser_zamani",
+    phone: "09943234567",
+    password:"20484096",
+    role:"ADMIN",
+    status: "prmitted",
   },
   {
     id: 3,
@@ -24,6 +35,7 @@ const users = [
     phone: "09902436396",
     password: "123456",
     role: "USER",
+    status: "prmitted",
     subscriptions: [
       {
         id: 1,
@@ -54,6 +66,7 @@ const users = [
     phone: "09900324369",
     password: "1991374",
     role: "USER",
+    status: "prmitted",
     subscriptions: [],
   },
   {
@@ -63,6 +76,7 @@ const users = [
     phone: "09124567831",
     password: "456789",
     role: "USER",
+    status: "prmitted",
     subscriptions: [
       {
         id: 3,
@@ -83,6 +97,7 @@ const users = [
     phone: "09351247896",
     password: "654321",
     role: "USER",
+    status: "prmitted",
     subscriptions: [
       {
         id: 4,
@@ -113,6 +128,7 @@ const users = [
     phone: "09129876543",
     password: "789456",
     role: "USER",
+    status: "prmitted",
     subscriptions: [
       {
         id: 6,
@@ -133,6 +149,7 @@ const users = [
     phone: "09911223344",
     password: "147258",
     role: "USER",
+    status: "prmitted",
     subscriptions: [
       {
         id: 7,
@@ -153,6 +170,7 @@ const users = [
     phone: "09361234578",
     password: "852369",
     role: "USER",
+    status: "prmitted",
     subscriptions: [],
   },
   {
@@ -162,6 +180,7 @@ const users = [
     phone: "09193456782",
     password: "369258",
     role: "USER",
+    status: "prmitted",
     subscriptions: [
       {
         id: 8,
@@ -192,6 +211,7 @@ const users = [
     phone: "09107654321",
     password: "741852",
     role: "USER",
+    status: "prmitted",
     subscriptions: [
       {
         id: 10,
@@ -212,6 +232,7 @@ const users = [
     phone: "09987654321",
     password: "963852",
     role: "USER",
+    status: "prmitted",
     subscriptions: [
       {
         id: 11,

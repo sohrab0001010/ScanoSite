@@ -1,6 +1,26 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 
 const AdminLogin = () => {
+
+  const [username,setUsername] = useState("");
+  const [password,setPassword] = useState("");
+
+  const passwordRef = useRef(null);
+  const usernameRef = useRef(null);
+
+
+  const focusPassword = e => {
+    e.preventDefault()
+    passwordRef.current.focus()
+  }
+
+  const focusUsername = () => {
+    usernameRef.current.focus()
+  }
+
+
+
+
   return (
     
     <div
@@ -60,7 +80,8 @@ const AdminLogin = () => {
 
 
         {/* Form */}
-        <form 
+        <form
+        dir='rtl' 
         action=""
         className="
         relative
@@ -83,6 +104,82 @@ const AdminLogin = () => {
         border-white/20
         "
         >
+          <input 
+          value={username}
+          type="text" 
+          className="
+          w-full
+          max-w-64
+           bg-white
+          text-[1.1rem]
+           text-black
+          outline-none
+          py-2
+          px-4
+          border
+           border-gray-300
+          rounded-lg
+          focus:border-[#0C2965]
+          transition-colors
+          duration-200
+           placeholder:text-gray-400
+          "
+          placeholder='نام کاربری/شماره موبایل'
+          autoFocus
+          onChange={e => setUsername(e.target.value)}
+          onKeyDown={e => {
+            if (e.keyCode === 13 || e.keyCode === 40)
+              focusPassword(e);
+          }}
+          />
+
+          <input 
+          ref={passwordRef}
+          value={password}
+          type="text" 
+          className="
+          w-full
+          max-w-64
+           bg-white
+          text-[1.1rem]
+           text-black
+          outline-none
+          py-2
+          px-4
+          border
+           border-gray-300
+          rounded-lg
+          focus:border-[#0C2965]
+          transition-colors
+          duration-200
+          "
+          placeholder='رمز عبور را وارد کنید'
+          onChange={e => setPassword(e.target.value)}
+          onKeyDown={e => {
+            e.keyCode === 38
+            ?focusUsername()
+            :""
+          }}
+          />
+
+          <input 
+          type="submit" 
+          value={`ادامه و ورود`}
+          className='
+          w-full
+          max-w-64
+          py-2
+          text-[1.1rem]
+         text-white
+          bg-[linear-gradient(135deg,#000000,#232526,#414345,#000000)]
+          cursor-pointer
+          rounded-lg
+          transition-all
+          duration-200
+          hover:scale-[1.02]
+          active:scale-[0.98]
+          '
+          />
 
         </form>
 

@@ -2,8 +2,10 @@ import React, { useRef, useState } from 'react'
 
 const AdminLogin = () => {
 
+  const [loading,setLoading] = useState(false);
   const [username,setUsername] = useState("");
   const [password,setPassword] = useState("");
+  const [error,setError] = useState("");
 
   const passwordRef = useRef(null);
   const usernameRef = useRef(null);
@@ -16,6 +18,50 @@ const AdminLogin = () => {
 
   const focusUsername = () => {
     usernameRef.current.focus()
+  }
+
+
+  const handleLogin = async e => {
+    e.preventDefault();
+
+    setError("");
+    setLoading(true);
+
+    try {
+      const response = await fetch(
+        "http://localhost/scano/backend/api/login.php",
+        {
+          method: "POST",
+          credentials: "include",
+          headers: {
+            "Content-Type":"application/json"
+          },
+          body: JSON.stringify({
+            username,
+            password
+          })
+        }
+      )
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setError(data.message);
+        return
+      }
+
+      console.log("Logged in:", data.user);
+
+    } 
+
+    catch (error) {
+      setError("ارتباط با سرور برقرار نشد");
+      console.error(error)
+
+    } finally {
+      setLoading(false)
+    }
+
   }
 
 
@@ -81,6 +127,7 @@ const AdminLogin = () => {
 
         {/* Form */}
         <form
+        onSubmit={handleLogin}
         dir='rtl' 
         action=""
         className="
@@ -136,7 +183,7 @@ const AdminLogin = () => {
           <input 
           ref={passwordRef}
           value={password}
-          type="text" 
+          type="password" 
           className="
           w-full
           max-w-64
@@ -164,7 +211,8 @@ const AdminLogin = () => {
 
           <input 
           type="submit" 
-          value={`ادامه و ورود`}
+          disabled={loading}
+          value={loading ? "در حال بررسی..." : "ادامه و ورود"}
           className='
           w-full
           max-w-64

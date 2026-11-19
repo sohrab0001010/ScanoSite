@@ -4,8 +4,8 @@ import { Link } from "react-router";
 import courses from "../../../shared/data/dataCourses";
 import books  from "../../../shared/data/dataBooks";
 import Book from "../components/Home/Book";
-import Modal from "../components/Modal/Modal";
-import modalConfig from "../components/Modal/modalConfig";
+import Modal from "../../../shared/components/Modal/Modal";
+import modalConfig from "../../../shared/components/Modal/modalConfig";
 import { ThemeContext } from "../components/context/ThemeContext";
 
 const Home = () => {

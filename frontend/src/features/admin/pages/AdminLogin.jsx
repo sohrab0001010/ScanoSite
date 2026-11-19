@@ -1,24 +1,50 @@
 import React, { useRef, useState } from 'react'
+import dataUsers from '../../../shared/data/dataUsers'
+
+
+
 
 const AdminLogin = () => {
-
+  
   const [username,setUsername] = useState("");
   const [password,setPassword] = useState("");
-
+  
   const passwordRef = useRef(null);
   const usernameRef = useRef(null);
-
-
+  
+  
   const focusPassword = e => {
     e.preventDefault()
     passwordRef.current.focus()
   }
-
-  const focusUsername = () => {
+  
+  const focusUsername = e => {
+    e.preventDefault()
     usernameRef.current.focus()
   }
+  
+  
+const handleLogin = (nameOrPhoene,pass) =>  {
 
+    const admin = dataUsers.find(item => 
+    (item.username === nameOrPhoene || item.phone === username) &&
 
+    item.password === pass &&
+
+    ["BOSS" && "SUPER_ADMIN" && "ADMIN"].includes(item.role)
+
+    )
+  
+    if (admin) {
+      console.log('sucess')
+  
+    } else if (!username || !password) {
+      console.log("please fill all the fields")
+
+    } else if (!admin) {
+      console.log("incorrect username or password")
+    }
+}
 
 
   return (
@@ -81,6 +107,7 @@ const AdminLogin = () => {
 
         {/* Form */}
         <form
+        onSubmit={e => e.preventDefault()}
         dir='rtl' 
         action=""
         className="
@@ -104,7 +131,8 @@ const AdminLogin = () => {
         border-white/20
         "
         >
-          <input 
+          <input
+          ref={usernameRef} 
           value={username}
           type="text" 
           className="
@@ -156,15 +184,18 @@ const AdminLogin = () => {
           placeholder='رمز عبور را وارد کنید'
           onChange={e => setPassword(e.target.value)}
           onKeyDown={e => {
-            e.keyCode === 38
-            ?focusUsername()
-            :""
+            if (e.keyCode === 38) focusUsername(e)
           }}
           />
 
           <input 
           type="submit" 
           value={`ادامه و ورود`}
+          onClick={e => {
+            e.preventDefault();
+
+            handleLogin(username,password)
+          }}
           className='
           w-full
           max-w-64

@@ -5,8 +5,8 @@ import { CgArrowLeft } from "react-icons/cg";
 import OTPInput from "../components/OTPInput/OTPInput";
 import users from "../../../shared/data/dataUsers"
 import OTPTimer from "../components/OTPTimer/OTPTimer";
-import Modal from "../components/Modal/Modal";
-import modalConfig from "../components/Modal/modalConfig";
+import Modal from "../../../shared/components/Modal/Modal";
+import modalConfig from "../../../shared/components/Modal/modalConfig";
 import { MdOutlineQrCodeScanner } from "react-icons/md";
 import { AuthContext } from "../components/context/AuthContext";
 
@@ -185,6 +185,7 @@ const Login = () => {
 
         {/* Form */}
         <form
+          onSubmit={e => e.preventDefault()}
           className="
             relative
             z-10

@@ -15,7 +15,7 @@ const users = [
     username: "ahmad_zamani",
     phone: "09388595862",
     password: "291374",
-    role: "SUPER ADMIN",
+    role: "SUPER_ADMIN",
     status: "prmitted",
     subscriptions: [],
   },

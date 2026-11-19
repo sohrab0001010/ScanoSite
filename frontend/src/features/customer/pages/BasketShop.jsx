@@ -3,8 +3,8 @@ import BasketContext from '../components/context/BasketContext'
 import { ImFilesEmpty } from "react-icons/im";
 import LeftBasket from '../components/BasketShop/LeftBasket';
 import RightBasket from '../components/BasketShop/RightBasket';
-import Modal from "../components/Modal/Modal"
-import modalConfig from "../components/Modal/modalConfig";
+import Modal from "../../../shared/components/Modal/Modal";
+import modalConfig from "../../../shared/components/Modal/modalConfig";;
 
 const BasketShop = () => {
 

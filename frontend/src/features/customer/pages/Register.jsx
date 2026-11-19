@@ -6,8 +6,8 @@ import { IoIosEye } from "react-icons/io";
 import {MdOutlineQrCodeScanner} from "react-icons/md"
 import OTPInput from '../components/OTPInput/OTPInput';
 import OTPTimer from '../components/OTPTimer/OTPTimer';
-import Modal from '../components/Modal/Modal';
-import modalConfig from '../components/Modal/modalConfig';
+import Modal from '../../../shared/components/Modal/Modal';
+import modalConfig from '../../../shared/components/Modal/modalConfig';
 
 const Register = () => {
 

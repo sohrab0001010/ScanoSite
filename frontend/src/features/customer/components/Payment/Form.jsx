@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
-import Modal from '../Modal/Modal'
-import modalConfig from '../Modal/modalConfig'
+import Modal from "../../../../shared/components/Modal/Modal";
+import modalConfig from "../../../../shared/components/Modal/modalConfig";
 import { useNavigate } from 'react-router'
 import { ThemeContext } from '../context/ThemeContext';
 
